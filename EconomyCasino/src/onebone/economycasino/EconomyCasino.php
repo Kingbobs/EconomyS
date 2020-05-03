@@ -48,7 +48,7 @@ class EconomyCasino extends PluginBase implements Listener{
 		$this->api = EconomyAPI::getInstance();
 		$this->config = new Config($this->getDataFolder()."config.yml", Config::YAML, array(
 			"jackpot-winning" => 1000,
-			"jackpot-money" => 5,
+			"jackpot-money" => 100,
 			"max-game" => 10
 		));
 
