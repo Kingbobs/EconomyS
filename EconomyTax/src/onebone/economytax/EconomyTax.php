@@ -46,9 +46,9 @@ class EconomyTax extends PluginBase{
 		
 		$this->api = EconomyAPI::getInstance();
 		$this->config = new Config($this->getDataFolder()."tax.properties", Config::PROPERTIES, array(
-			"time-for-tax" => 10,
+			"time-for-tax" => 100,
 			"tax-as-percentage" => "",
-			"tax-as-money" => 100
+			"tax-as-money" => 1000
 		));
 		$this->getScheduler()->scheduleRepeatingTask(new PayTask($this), $this->config->get("time-for-tax")*1200);
 	}
